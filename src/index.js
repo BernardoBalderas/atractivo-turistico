@@ -1,3 +1,8 @@
+
+if(process.env.NODE_ENV !== 'production'){
+    require('dotenv').config();
+}
+
 const express = require('express');
 const morgan = require('morgan');
 const multer = require('multer');
@@ -40,6 +45,8 @@ app.use(require('./routes/index'));
 app.use(express.static(path.join(__dirname, 'public')));
 
 // start
-app.listen(4100, () => {
-    console.log(`Server on port ${app.get('port')}`);
+app.listen(app.get('port'), () => {
+    console.log('Server on port ', app.get('port'));
+    console.log('Evironment: ', process.env.NODE_ENV);
+
 });
