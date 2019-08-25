@@ -4,12 +4,14 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": " nodemon src/index.js"
+    "dev": " nodemon src/index.js",
+    "start": " node src/index.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "cross-env": "^5.2.0",
     "ejs": "^2.6.1",
     "express": "^4.16.4",
     "fs-extra": "^7.0.1",
