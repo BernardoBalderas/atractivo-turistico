@@ -12,7 +12,8 @@
 <body>
 
     <%- include("partials/navigation") %>
-
+    <input type="button" onclick="tableToExcel('myTable', 'W3C Example Table')" value="Export to Excel">
+<!--<button id="btnDescargar" type="button" class="btn btn-default">Descargar</button>-->
     <div class="container p-4">
         <div class="row">
             <div class="card-columns">
@@ -21,7 +22,7 @@
 
                 <div class="card animated fadeInDown">
                     <img src="<%= image.path %>" class="card-img-top" alt="<%= image.filename %>">
-                    <div class="card-body">
+                    <div class="card-body" id="myTable">
                         <h5 class="card-title"><%= image.title %></h5>
                         <p class="card-text"><%= image.description %></p>
                         <p class="card-text"><%= image.direccion %></p>
@@ -35,7 +36,6 @@
             </div>
         </div>
     </div>
-
+<script src="../js/tableToExcel.js"></script>
 </body>
-
 </html>
